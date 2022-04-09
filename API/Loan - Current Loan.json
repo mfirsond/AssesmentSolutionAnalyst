@@ -1,0 +1,43 @@
+/*Request - Retrieve Current Loan - POST*/
+{
+    "paging": {
+      "limit": 50,
+      "page": 1
+    },
+    "parameter": {
+        "column": [],
+        "sort": {
+            "loanPayId": "ASC"
+        },
+        "criteria": {
+            "submittedBy": 1, /*Table loan_application, Attribute submitted_by*/
+        },
+        "criteriaType": "OR",
+        "filter": {}
+    }
+}
+
+/*Response - Retrieve Current Loan - POST*/
+{
+    "status": {
+        "responseCode": "200",
+        "responseDesc": "Success retrieve current loan data!",
+    },
+    "result": {
+        "loanAppId": 1, /*Table loan_application, Attribute loan_app_id*/
+        "submitted":{
+            "submittedById": 1, /*Table loan_application, Attribute submitted_by*/
+            "submittedBy": "Mark Rufallo" /*Table user, Attribute Concat From firs_name, middle_name, last_name*/
+        },
+        "loanStart": "2022-01-01", /*Table loan_application, Attribute loan_start*/
+        "loanEnd": "2023-01-01", /*Table loan_application, Attribute loan_end*/
+        "applicationStatus": "Approved", /*Table loan_application, Attribute application_status*/
+        "loanStatus": "Already Paid", /*Table loan_application, Attribute loan_status*/
+        "loanAmount": 12000000.00, /*Table loan_application, Attribute amount*/
+        "loanRemaining": 9000000.00, /*Table loan_payment_history, Attribute remaining_payment*/
+        "createdOn": "2022-01-01", /*Table loan_application, Attribute created_on*/
+        "createdBy": "Mark Rufallo", /*Table loan_application, Attribute created_by*/
+        "updatedOn": "", /*Table loan_application, Attribute updated_on*/
+        "updatedBy": "" /*Table loan_application, Attribute updated_by*/
+    }
+}

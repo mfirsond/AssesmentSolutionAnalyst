@@ -1,0 +1,74 @@
+/*Request - Retrieve Today Transaction - POST*/
+{
+    "paging": {
+      "limit": 50,
+      "page": 1
+    },
+    "parameter": {
+        "column": [],
+        "sort": {
+            "loanPayId": "ASC"
+        },
+        "criteria": {
+            "userId": 1,
+            "userAccountId": 1,
+            "startPeriod": "2022-04-07",
+            "endPeriod": "2022-04-07"
+        },
+        "criteriaType": "OR",
+        "filter": {}
+    }
+  }
+
+/*Response - Retrieve Today Transaction - POST*/
+{
+    "status": {
+        "responseCode": "200",
+        "responseDesc": "Success retrieve today transaction data!",
+    },
+    "result": {
+        "userId": 1,
+        "transaction":[
+            {
+                "transactionId": 1,
+                "userAccountId": 1,
+                "transactionOutInc": "O",
+                "transactionAmount": 550000.00,
+                "createdOn": "2022-04-07", 
+                "createdBy": "Mark Rufallo"
+            },
+            {
+                "transactionId": 2,
+                "userAccountId": 1,
+                "transactionOutInc": "I",
+                "transactionAmount": 100000.00,
+                "createdOn": "2022-04-07", 
+                "createdBy": "Mark Rufallo"
+            },
+            {
+                "transactionId": 3,
+                "userAccountId": 1,
+                "transactionOutInc": "I",
+                "transactionAmount": 50000.00,
+                "createdOn": "2022-04-07", 
+                "createdBy": "Mark Rufallo"
+            },
+            {
+                "transactionId": 4,
+                "userAccountId": 1,
+                "transactionOutInc": "O",
+                "transactionAmount": 50000.00,
+                "createdOn": "2022-04-07", 
+                "createdBy": "Mark Rufallo"
+            },
+            {
+                "transactionId": 5,
+                "userAccountId": 1,
+                "transactionOutInc": "I",
+                "transactionAmount": 350000.00,
+                "createdOn": "2022-04-07", 
+                "createdBy": "Mark Rufallo"
+            },
+        ]
+    }
+}

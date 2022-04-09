@@ -1,0 +1,57 @@
+/*Request - Retrieve Loan Application Status - POST*/
+{
+    "paging": {
+      "limit": 50,
+      "page": 1
+    },
+    "parameter": {
+        "column": [],
+        "sort": {},
+        "criteria": {
+            "userAccountId": 1, /*Table loan, Attribute user_account_id*/
+            "loanLimit": 1, /*Table loan_application, Attribute loan_limit*/
+            "loanAppId": 1 /*Table loan_application, Attribute loan_app_id*/
+        },
+        "criteriaType": "AND",
+        "filter": {}
+    }
+}
+
+/*Response - Retrieve Loan Application Status - POST*/
+{
+    "status": {
+        "responseCode": "200",
+        "responseDesc": "Success retrieve loan application status data!",
+    },
+    "result": {
+        "loanAppId": 1, /*Table loan_application, Attribute loan_app_id*/
+        "loan": {
+            "loanId": 1, /*Table loan, Attribute loan_id*/
+            "userAccountId": 1, /*Table loan, Attribute user_account_id*/
+            "name": "Loan Tenor 1 Year", /*Table loan, Attribute name*/
+            "description": "Lorem Ipsum", /*Table loan, Attribute description*/
+            "monthTenor": 12, /*Table loan, Attribute month_tenor*/
+            "maxLoanAmount": 1000000.00, /*Table loan, Attribute max_loan_amount*/
+            "minLoanAmount": 12000000.00, /*Table loan, Attribute min_loan_amount*/
+            "isDeleted": 0, /*Table loan, Attribute is_deleted*/
+            "createdOn": "2022-01-01", /*Table loan, Attribute created_on*/
+            "createdBy": "Mark Rufallo", /*Table loan, Attribute created_by*/
+            "updatedOn": "", /*Table loan, Attribute updated_on*/
+            "updatedBy": "" /*Table loan, Attribute updated_by*/
+        },
+        "submitted":{
+            "submittedById": 1, /*Table loan_application, Attribute submitted_by*/
+            "submittedBy": "Mark Rufallo" /*Table user, Attribute Concat From firs_name, middle_name, last_name*/
+        },
+        "loanStart": "2023-02-01", /*Table loan_application, Attribute loan_start*/
+        "loanEnd": "2024-03-01", /*Table loan_application, Attribute loan_end*/
+        "applicationStatus": "Requested", /*Table loan_application, Attribute application_status*/
+        "loanStatus": "Not Paid", /*Table loan_application, Attribute loan_status*/
+        "loanAmount": 12000000.00, /*Table loan_application, Attribute amount*/
+        "isDeleted": 0, /*Table loan_application, Attribute is_deleted*/
+        "createdOn": "2023-02-01", /*Table loan_application, Attribute created_on*/
+        "createdBy": "Mark Rufallo", /*Table loan_application, Attribute created_by*/
+        "updatedOn": "", /*Table loan_application, Attribute updated_on*/
+        "updatedBy": "" /*Table loan_application, Attribute updated_by*/
+    }
+}

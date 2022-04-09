@@ -1,0 +1,75 @@
+/*Request - Retrieve Loan Approval Status - POST*/
+{
+    "paging": {
+      "limit": 50,
+      "page": 1
+    },
+    "parameter": {
+        "column": [],
+        "sort": {},
+        "criteria": {
+            "loanAppId": 1 /*Table loan_application, Attribute loan_app_id*/
+        },
+        "criteriaType": "OR",
+        "filter": {}
+    }
+}
+
+/*Response - Retrieve Loan Approval Status - POST*/
+{
+    "status": {
+        "responseCode": "200",
+        "responseDesc": "Success retrieve loan approval status data!"
+    },
+    "result": {
+        "loanAppId": 1, /*Table approval_loan_app, Attribute loan_app_id*/
+        "approver": [
+            {
+                "approverId": 1,
+                "user":{
+                    "userId": 11, /*Table approver, Attribute user_id*/
+                    "fullName": "Chris Hemsworth" /*Table user, Attribute Concat From firs_name, middle_name, last_name*/
+                },
+                "approverLevel": 1, /*Table approver, Attribute approver_level*/
+                "approvalStatus": 1, /*Table approval_loan_app, Attribute approval_status*/
+                "status": 1, /*Table approver, Attribute status*/
+                "createdOn": "2022-01-01", /*Table approver, Attribute created_on*/
+                "createdBy": "Mark Rufallo", /*Table approver, Attribute created_by*/
+                "updatedOn": "", /*Table approver, Attribute updated_on*/
+                "updatedBy": "" /*Table approver, Attribute updated_by*/
+            },
+            {
+                "approverId": 2,
+                "user":{
+                    "userId": 12, /*Table approver, Attribute user_id*/
+                    "fullName": "Jeremy Renner" /*Table user, Attribute Concat From firs_name, middle_name, last_name*/
+                },
+                "approverLevel": 2, /*Table approver, Attribute approver_level*/
+                "approvalStatus": 1, /*Table approval_loan_app, Attribute approval_status*/
+                "status": 1, /*Table approver, Attribute status*/
+                "createdOn": "2022-01-01", /*Table approver, Attribute created_on*/
+                "createdBy": "Mark Rufallo", /*Table approver, Attribute created_by*/
+                "updatedOn": "", /*Table approver, Attribute updated_on*/
+                "updatedBy": "" /*Table approver, Attribute updated_by*/
+            },
+            {
+                "approverId": 3,
+                "user":{
+                    "userId": 3, /*Table approver, Attribute user_id*/
+                    "fullName": "Brie Larson" /*Table user, Attribute Concat From firs_name, middle_name, last_name*/
+                },
+                "approverLevel": 3, /*Table approver, Attribute approver_level*/
+                "approvalStatus": 1, /*Table approval_loan_app, Attribute approval_status*/
+                "status": null, /*Table approver, Attribute status*/
+                "createdOn": "2022-01-01", /*Table approver, Attribute created_on*/
+                "createdBy": "Mark Rufallo", /*Table approver, Attribute created_by*/
+                "updatedOn": "", /*Table approver, Attribute updated_on*/
+                "updatedBy": "" /*Table approver, Attribute updated_by*/
+            },
+        ],
+        "createdOn": "2023-02-01", /*Table approver, Attribute created_on*/
+        "createdBy": "Mark Rufallo", /*Table approver, Attribute created_by*/
+        "updatedOn": "", /*Table approver, Attribute updated_on*/
+        "updatedBy": "" /*Table approver, Attribute updated_by*/
+    }
+}

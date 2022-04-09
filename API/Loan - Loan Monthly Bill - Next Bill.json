@@ -1,0 +1,81 @@
+/*Request - Retrieve Loan Next Bill - POST*/
+{
+    "paging": {
+      "limit": 50,
+      "page": 1
+    },
+    "parameter": {
+        "column": [],
+        "sort": {},
+        "criteria": {
+            "loanAppId": 1 /*Table loan_application, Attribute loan_app_id*/
+        },
+        "criteriaType": "OR",
+        "filter": {}
+    }
+}
+
+/*Response - Retrieve Loan Next Bill - POST*/
+{
+    "status": {
+        "responseCode": "200",
+        "responseDesc": "Success retrieve loan next bill data!"
+    },
+    "result": {
+        "loanAppId": 1, /*Table loan_payment_history, Attribute loan_app_id*/
+        "loanPayHistory": [
+            {
+                "loanPayHistoryId": 4,
+                "paymentType": "Teller", /*Table loan_payment_history, Attribute payment_type*/
+                "paymentDate": "2022-05-01", /*Duplicate Data From Key "createdOn"*/
+                "nextMonth": 5, /*Table loan_payment_history, Attirbute already_paid_month Plus One (1)*/
+                "nextMonthAmount": 1000000.00, /*Table loan_payment_history, Attribute remaining_payment Distribution With Table loan_payment_history, Attribute remaining_month*/
+                "alreadyPaidAmount": 1000000.00, /*Table loan_payment_history, Attribute already_paid_amount*/
+                "status": "Paid", /*Table loan_payment_history, Attribute already_paid_amount is null, then show data "Not Paid", if that data was filled then show data "Paid"*/
+                "createdOn": "2022-05-01", /*Table loan_payment_history, Attribute created_on*/
+                "createdBy": "Mark Rufallo", /*Table loan_payment_history, Attribute created_by*/
+                "updatedOn": "", /*Table loan_payment_history, Attribute updated_on*/
+                "updatedBy": "" /*Table loan_payment_history, Attribute updated_by*/
+            },
+            {
+                "loanPayHistoryId": 3,
+                "paymentType": "Teller", /*Table loan_payment_history, Attribute payment_type*/
+                "paymentDate": "2022-04-01", /*Duplicate Data From Key "createdOn"*/
+                "nextMonth": 4, /*Table loan_payment_history, Attirbute already_paid_month Plus One (1)*/
+                "nextMonthAmount": 1000000.00, /*Table loan_payment_history, Attribute remaining_payment Distribution With Table loan_payment_history, Attribute remaining_month*/
+                "alreadyPaidAmount": 1000000.00, /*Table loan_payment_history, Attribute already_paid_amount*/
+                "status": "Paid", /*Table loan_payment_history, Attribute already_paid_amount is null, then show data "Not Paid", if that data was filled then show data "Paid"*/
+                "createdOn": "2022-04-01", /*Table loan_payment_history, Attribute created_on*/
+                "createdBy": "Mark Rufallo", /*Table loan_payment_history, Attribute created_by*/
+                "updatedOn": "", /*Table loan_payment_history, Attribute updated_on*/
+                "updatedBy": "" /*Table loan_payment_history, Attribute updated_by*/
+            },
+            {
+                "loanPayHistoryId": 2,
+                "paymentType": "Teller", /*Table loan_payment_history, Attribute payment_type*/
+                "paymentDate": "2022-03-01", /*Duplicate Data From Key "createdOn"*/
+                "nextMonth": 3, /*Table loan_payment_history, Attirbute already_paid_month Plus One (1)*/
+                "nextMonthAmount": 1000000.00, /*Table loan_payment_history, Attribute remaining_payment Distribution With Table loan_payment_history, Attribute remaining_month*/
+                "alreadyPaidAmount": 1000000.00, /*Table loan_payment_history, Attribute already_paid_amount*/
+                "status": "Paid", /*Table loan_payment_history, Attribute already_paid_amount is null, then show data "Not Paid", if that data was filled then show data "Paid"*/
+                "createdOn": "2022-03-01", /*Table loan_payment_history, Attribute created_on*/
+                "createdBy": "Mark Rufallo", /*Table loan_payment_history, Attribute created_by*/
+                "updatedOn": "", /*Table loan_payment_history, Attribute updated_on*/
+                "updatedBy": "" /*Table loan_payment_history, Attribute updated_by*/
+            },
+            {
+                "loanPayHistoryId": 1,
+                "paymentType": "Saving Account", /*Table loan_payment_history, Attribute payment_type*/
+                "paymentDate": "2022-02-01", /*Duplicate Data From Key "createdOn"*/
+                "nextMonth": 2, /*Table loan_payment_history, Attirbute already_paid_month Plus One (1)*/
+                "nextMonthAmount": 1000000.00, /*Table loan_payment_history, Attribute remaining_payment Distribution With Table loan_payment_history, Attribute remaining_month*/
+                "alreadyPaidAmount": 1000000.00, /*Table loan_payment_history, Attribute already_paid_amount*/
+                "status": "Paid", /*Table loan_payment_history, Attribute already_paid_amount is null, then show data "Not Paid", if that data was filled then show data "Paid"*/
+                "createdOn": "2022-02-01", /*Table loan_payment_history, Attribute created_on*/
+                "createdBy": "Mark Rufallo", /*Table loan_payment_history, Attribute created_by*/
+                "updatedOn": "", /*Table loan_payment_history, Attribute updated_on*/
+                "updatedBy": "" /*Table loan_payment_history, Attribute updated_by*/
+            }
+        ]
+    }
+}

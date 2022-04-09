@@ -1,0 +1,25 @@
+/*Request - Login Using Username & Password - POST*/
+{
+    "parameter": {
+        "data": {
+            "username": "@markRufall0", /*Table user, Attribute username*/
+            "password": "@markRufall0", /*Table user, Attribute password*/
+            "biometricLogin": "1" /*0 = Not Using Biometric, 1 = Using Biometric*/ /*Table user, Attribute biometric_login*/
+        }
+    }
+}
+
+/*Response - Login Using Username & Password - POST*/
+{
+    "status": {
+        "responseCode": "200",
+        "responseDesc": "Login success.",
+        "responseMessage": "Login success."
+    },
+    "result": {
+        "token": "eyJlbmMiOiJBMTI4Q0JDLUhTMjU2IiwiYWxnIjoiZGlyIn0..vtUMGYuAb-cm1paECNqvBg.TvQKrx5VP_w8lBu6u5M7J0_brCI2JiRS83Bg_Up5LH46VjXNOqzPWafR1mkWBa9DowOECcYzPlzRoR0xv_NcsZdtQhOafTHLnf21725xJHD0MWxFyBul5sa12ErzK0Ns4y-hHa5SGjDa0IIvYA4YePp2IJWLG1FjopQ9sbaMxZM4gfa4OZf0BbccoSf7F2C2yJMEX4e9IFpdkmjuj5CAqA.QxVAV13doJb4yKqz5uM0kg",
+        "roles": [
+            "ROLE_USER" /*Table user, Attribute role_id, Join With Table role, Attribute role_id, Get From Attribute role_name*/
+        ]
+    }
+}

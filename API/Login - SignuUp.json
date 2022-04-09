@@ -1,0 +1,87 @@
+/*Request - SignUp - PUT*/
+{
+    "parameter": {
+        "data": {
+            "username": "@markRufall0", /*Table user, Attribute username*/
+            "password": "@markRufall0", /*Table user, Attribute password*/
+            "reTypePassword": "@markRufall0", /*Mathing With Key "password"*/
+            "firstName": "Mark", /*Table user, Attribute first_name*/
+            "middleName": "", /*Table user, Attribute middle_name*/
+            "lastName": "Rufallo", /*Table user, Attribute last_name*/
+            "nationality": 360, /*Table user, Attribute nationality_id #ISO3166*/
+            "placeOfBirth": "Jakarta", /*Table user, Attribute place_of_birth*/
+            "dateOfBirth": "1970-01-15", /*Table user, Attribute date_of_birth*/
+            "email": "markRufallo@gmail.com", /*Table user, Attribute email*/
+            "phone": "08112345678", /*Table user, Attribute email*/
+            "picture":{
+                "photoName": "Profile Picture MR.jpeg" /*Table user, Attribute photo_name*/
+            },
+            "identity":[
+                {
+                    "identityType": "KTP", /*Table user_identity, Attribute identity_type*/
+                    "fileName": "MR KTP.jpeg", /*Table identity_file, Attribute file_name*/
+                    "identityNumber": "3145121501700001", /*Table user_identity, Attribute identity_number*/
+                    "identityExpired": "Lifetime" /*Table user_identity, Attribute identity_expired*/
+                }
+            ]
+        }
+    }
+}
+
+/*Response - Signup - PUT*/
+{
+    "status": {
+        "responseCode": "200",
+        "responseDesc": "Success create data!",
+    },
+    "result": {
+        "user_id": 1, /*Table user, Attribute user_id*/
+        "username": "@markRufall0",
+        "password": "@markRufall0",
+        "firstName": "Mark",
+        "middleName": "",
+        "lastName": "Rufallo",
+        "nationality": {
+            "nationalityId": 360, /*Table user, Attribute nationality_id*/
+            "nationalityName": "Indonesia" /*Table nationality, Attribute country_name*/
+        },
+        "placeOfBirth": "Jakarta",
+        "dateOfBirth": "1970-01-15",
+        "email": "markRufallo@gmail.com",
+        "phone": "08112345678",
+        "picture":{
+            "photoName": "Profile Picture MR.jpeg",
+            "photoNameRandom": "skajhdfkjsahfh7safh7sdfhs", /*Table user, Attribute photo_name_random*/
+            "photoPath": "user/images/profile/" /*Table user, Attribute photo_path*/
+        },
+        "identity":[
+            {
+                "user_identity_id": 1, /*Table user_identity, Attribute user_identity_id*/
+                "identityType": "KTP", /*Table user_identity, Attribute identity_type*/
+                "identityFileId": 1, /*Table identity_file, Attribute identity_file_id*/
+                "fileName": "MR KTP.jpeg", /*Table identity_file, Attribute file_name*/
+                "identityNumber": "3145121501700001", /*Table user_identity, Attribute identity_number*/
+                "identityExpired": "Lifetime", /*Table user_identity, Attribute identity_expired*/
+                "fileRandomName": "sajkdfhsdkfh7yfsdfysf", /*Table identity_file, Attribute identity_random_name*/
+                "fileType": "Image", /*Table identity_file, Attribute file_type*/
+                "fileExtention": "jpeg", /*Table identity_file, Attribute file_extention*/
+                "filePath": "user/images/identity/", /*Table identity_file, Attribute file_path*/
+                "createdOn": "2022-01-01", /*Table user_identity, Attribute created_on*/
+                "createdBy": "Mark Rufallo", /*Table user_identity, Attribute created_by*/
+                "updatedOn": "", /*Table user_identity, Attribute updated_on*/
+                "updatedBy": "" /*Table user_identity, Attribute updated_by*/
+            }
+        ],
+        "loanEmailNotif": 1, /*Table user, Attribute loan_email_notif*/
+        "loanSMSNotif": 1, /*Table user, Attribute loan_sms_notif*/
+        "biometricLogin": 1, /*Table user, Attribute biometric_login*/
+        "role": {
+            "roleId": 1, /*Table user, Attribute role_id*/
+            "roleName": "ROLE_USER" /*Table role, Attribute role_name*/
+        },
+        "createdOn": "2022-01-01", /*Table user, Attribute created_on*/
+        "createdBy": "Mark Rufallo", /*Table user, Attribute created_by*/
+        "updatedOn": "", /*Table user, Attribute updated_on*/
+        "updatedBy": "" /*Table user, Attribute updated_by*/
+    }
+}

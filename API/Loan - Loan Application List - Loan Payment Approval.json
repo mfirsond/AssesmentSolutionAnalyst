@@ -1,0 +1,29 @@
+/*Request - Create Loan Payment Approval - PUT*/
+{
+    "parameter": {
+        "data": {
+            "loanAppId": 1, /*Table loan_application, Attribute loan_app_id*/
+            "approverId": 11, /*Table approval_loan_app, Attribute approver_id*/
+            "approvalStatus": 1 /*Table approval_loan_app, Attribute approval_status*/
+        }
+    }
+}
+
+/*Response - Create Loan Payment Approval - PUT*/
+{
+    "status": {
+        "responseCode": "200",
+        "responseDesc": "Success create loan application data!",
+    },
+    "result": {
+        "approvalLoanId": 1, /*Table approval_loan_app, Attribute approval_loan_id*/
+        "loanAppId": 1, /*Table loan_application, Attribute loan_app_id*/
+        "approverId": 11, /*Table approval_loan_app, Attribute approver_id*/
+        "fullName": "Chris Hemsworth", /*Table user, Attribute Concat From firs_name, middle_name, last_name*/
+        "approverLevel": 1, /*Table approver, Attribute approver_level*/
+        "approvalStatus": 1, /*Table approval_loan_app, Attribute approval_status*/
+        "loanAppStatus": "In Progress", /*Table approval_loan_app, Attribute loan_app_status*/
+        "createdOn": "2022-01-01", /*Table approval_loan_app, Attribute created_on*/
+        "createdBy": "Chris Hemsworth" /*Table approval_loan_app, Attribute created_by*/
+    }
+}

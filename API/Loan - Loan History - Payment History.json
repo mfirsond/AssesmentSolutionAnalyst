@@ -1,0 +1,75 @@
+/*Request - Retrieve Payment History - POST*/
+{
+    "paging": {
+      "limit": 50,
+      "page": 1
+    },
+    "parameter": {
+        "column": [],
+        "sort": {},
+        "criteria": {
+            "loanAppId": 1 /*Table loan_application, Attribute loan_app_id*/
+        },
+        "criteriaType": "OR",
+        "filter": {}
+    }
+}
+
+
+/*Response - Retrieve Payment History - POST*/
+{
+    "status": {
+        "responseCode": "200",
+        "responseDesc": "Success retrieve loan payment history data!"
+    },
+    "result": {
+        "loanAppId": 1, /*Table loan_payment_history, Attribute loan_app_id*/
+        "loanPayment": [
+            {
+                "loanPayId": 3,
+                "paymentType": "Teller", /*Table loan_payment, Attribute payment_type*/
+                "receiverBankCode": "MNDR", /*Table loan_payment, Attribute receiver_bank_code*/
+                "receiverAccNum": "82947932874", /*Table loan_payment, Attribute receiver_acc_num*/
+                "savingAccountId": "", /*Table loan_payment, Attribute saving_account_id*/
+                "paymentDate": "2022-04-01", /*Table loan_payment, Attribute payment_date*/
+                "paymentAmount": 1000000.00, /*Table loan_payment, Attribute payment_amount*/
+                "paidBy": "Mark Rufallo", /*Table loan_payment, Attribute paid_by*/
+                "tellerBy": "Chris Evans", /*Table loan_payment, Attribute teller_by*/
+                "createdOn": "2022-04-01", /*Table loan_payment, Attribute created_on*/
+                "createdBy": "Mark Rufallo", /*Table loan_payment, Attribute created_by*/
+                "updatedOn": "", /*Table loan_payment, Attribute updated_on*/
+                "updatedBy": "" /*Table loan_payment, Attribute updated_by*/
+            },
+            {
+                "loanPayId": 2,
+                "paymentType": "Saving Account", /*Table loan_payment, Attribute payment_type*/
+                "receiverBankCode": "MNDR", /*Table loan_payment, Attribute receiver_bank_code*/
+                "receiverAccNum": "82947932874", /*Table loan_payment, Attribute receiver_acc_num*/
+                "savingAccountId": 1, /*Table loan_payment, Attribute saving_account_id*/
+                "paymentDate": "2022-03-01", /*Table loan_payment, Attribute payment_date*/
+                "paymentAmount": 1000000.00, /*Table loan_payment, Attribute payment_amount*/
+                "paidBy": "Mark Rufallo", /*Table loan_payment, Attribute paid_by*/
+                "tellerBy": "MyAccount Apps", /*Table loan_payment, Attribute teller_by*/
+                "createdOn": "2022-03-01", /*Table loan_payment, Attribute created_on*/
+                "createdBy": "Mark Rufallo", /*Table loan_payment, Attribute created_by*/
+                "updatedOn": "", /*Table loan_payment, Attribute updated_on*/
+                "updatedBy": "" /*Table loan_payment, Attribute updated_by*/
+            },
+            {
+                "loanPayId": 1,
+                "paymentType": "Teller", /*Table loan_payment, Attribute payment_type*/
+                "receiverBankCode": "MNDR", /*Table loan_payment, Attribute receiver_bank_code*/
+                "receiverAccNum": "82947932874", /*Table loan_payment, Attribute receiver_acc_num*/
+                "savingAccountId": "", /*Table loan_payment, Attribute saving_account_id*/
+                "paymentDate": "2022-02-01", /*Table loan_payment, Attribute payment_date*/
+                "paymentAmount": 1000000.00, /*Table loan_payment, Attribute payment_amount*/
+                "paidBy": "Mark Rufallo", /*Table loan_payment, Attribute paid_by*/
+                "tellerBy": "Chris Evans", /*Table loan_payment, Attribute teller_by*/
+                "createdOn": "2022-02-01", /*Table loan_payment, Attribute created_on*/
+                "createdBy": "Mark Rufallo", /*Table loan_payment, Attribute created_by*/
+                "updatedOn": "", /*Table loan_payment, Attribute updated_on*/
+                "updatedBy": "" /*Table loan_payment, Attribute updated_by*/
+            },
+        ]
+    }
+}
